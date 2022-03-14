@@ -1,0 +1,50 @@
+<!--==================== PROJECTS ====================-->
+<section class="project section" id="projects">
+  <h2 class="section_title">Projects</h2>
+  <span class="section_subtitle">Most recent work</span>
+
+  <div class="project_container container "> <!--swiper-container-->
+    <div class="inner-container">
+<!--    <div class="inner-swiper">-->
+      <swiper [config]="config">  <!--swiper-wrapper-->
+
+      <!--==================== PROJECTS 1 ====================-->
+      <ng-template swiperSlide  *ngFor="let project of profile?.projects">
+        <div class="project_content grid ">
+          <img alt="" class="project_img" src="assets/img/octacat.png">
+
+          <div class="project_data">
+            <h3 class="project_title">{{project.title}}</h3>
+            <p class="project_description">{{project.description}}</p>
+            <!--          <a class="button button&#45;&#45;flex button&#45;&#45;small project_button" href="#" >-->
+            <a class="project_link" href="{{project.link}}">
+              Click here to know more
+              <i class="uil uil-arrow-right button_icon"></i>
+            </a>
+          </div>
+        </div> <!--swiper-slide-->
+      </ng-template>
+
+
+    </swiper>
+<!--    </div>-->
+      <!--      Add Arrows-->
+      <div class="button-next" id="next">
+        <i class="uil uil-angle-right-b swiper-project-icon"></i>
+      </div>
+      <div class="button-prev" id="prev">
+        <i class="uil uil-angle-left-b swiper-project-icon"></i>
+      </div>
+    </div>
+
+<!--     Add Pagination-->
+    <div class="pagination"></div>
+
+  </div>
+  <div class="project_footer">
+    <a class="button button--flex button--small project_button" href="{{profile?.socialLinks?.github}}">
+      View more of my projects
+      <i class="uil uil-arrow-right button_icon"></i>
+    </a>
+  </div>
+</section>

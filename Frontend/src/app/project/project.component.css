@@ -1,0 +1,145 @@
+/*==================== SWIPER CSS ====================*/
+@import '~swiper/swiper-bundle.css';
+
+
+/*==================== PORTFOLIO ====================*/
+.project_container {
+  overflow: initial;
+}
+
+.project_content {
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.project_img {
+  /*width: 100%;*/
+  border-radius: .5rem;
+  justify-self: center;
+}
+
+.project_title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.project_footer{
+  text-align: center;
+  margin-top: var(--mb-3);;
+}
+
+.project_description {
+  margin-bottom: var(--mb-0-75);
+  /*white-space: nowrap;*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  /* autoprefixer: ignore next */ -webkit-box-orient: vertical;
+}
+
+.project_link{
+  color: var(--first-color);
+}
+
+.project_link:hover{
+  color: var(--first-color-alt);
+  transform: translateX(.25rem);
+}
+.project_link:hover .button_icon{
+  transform: translateX(.25rem);
+}
+
+.project_button:hover .button_icon {
+  transform: translateX(.25rem);
+}
+
+.inner-container{
+  position: relative;
+  display: flex;
+}
+.inner-swiper{
+}
+
+/*Swiper*/
+.button-prev::after, .button-next::after {
+  /*content: '';*/
+}
+
+.swiper-project-icon {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.button-prev {
+  left: -1.5rem;
+  position: absolute;
+  top: 25%;
+  /*display: flex;*/
+}
+
+.button-next {
+  right: -1.5rem;
+  position: absolute;
+  top: 25%;
+  /*display: flex;*/
+}
+
+.pagination{
+  text-align: center;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--first-color);
+}
+
+.button-prev, .button-next, .swiper-pagination-bullet {
+  outline: none;
+}
+
+/*==================== MEDIA QUERIES ====================*/
+/* For medium devices */
+@media screen and (min-width: 568px) {
+  .project_content {
+    grid-template-columns: auto auto;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project_img {
+    /*width: 320px;*/
+  }
+
+  .project_content {
+    align-items: center;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .project_content {
+    column-gap: 2rem;
+  }
+
+  .swiper-project-icon {
+    font-size: 3.5rem
+  }
+
+  .button-prev {
+    left: -3.5rem;
+  }
+
+  .button-next {
+    right: -3.5rem;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: -4.5rem;
+  }
+}

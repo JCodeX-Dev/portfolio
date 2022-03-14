@@ -1,0 +1,43 @@
+<header class="header" id="header" >
+  <nav class="nav container">
+    <a class="nav_logo" href="#">{{profile?.firstName}}</a>
+
+    <div class="nav_menu" id="nav-menu">
+      <ul class="nav_list grid">
+        <li class="nav_item">
+          <a class="nav_link active-link" href="#home" (click)="closeMenu()">
+            <i class="uil uil-estate nav_icon"></i> Home
+          </a>
+        </li>
+        <li class="nav_item">
+          <a class="nav_link" href="#about" (click)="closeMenu()">
+            <i class="uil uil-user nav_icon"></i> About
+          </a>
+        </li>
+
+        <li class="nav_item">
+          <a class="nav_link" href="#projects" (click)="closeMenu()">
+            <i class="uil uil-briefcase-alt nav_icon"></i> Projects
+          </a>
+        </li>
+
+        <li class="nav_item">
+          <a class="nav_link" href="#contact" (click)="closeMenu()">
+            <i class="uil uil-message nav_icon"></i> Contact Me
+          </a>
+        </li>
+      </ul>
+      <i (click)="closeMenu()" class="uil uil-times nav_close" id="nav-close"></i>
+    </div>
+
+    <!-- Activate / deactivate the theme manually with the button -->
+    <div class="nav_btns">
+      <!-- Theme Change Button -->
+<!--      <i (click)="changeTheme()" class="uil uil-moon change-theme" id="theme-button"></i>-->
+
+      <div (click)="showMenu()" class="nav_toggle" id="nav-toggle">
+        <i class="uil uil-apps"></i>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,42 @@
+<!--==================== ABOUT ====================-->
+<section class="about section" id="about">
+  <h2 class="section_title">About Me</h2>
+  <span class="section_subtitle"> My Introduction</span>
+
+  <div class="about_container container grid">
+    <img alt="" class="about_img" src="../../assets/img/about.png">
+
+    <div class="about_data">
+      <p class="about_description"> {{profile?.about?.intro}}
+<!--        Hi! I'm Jeremy Sam Joseph,<br> I’m a 2020 CS graduate, currently working in TCS with an experience of 1.6 years.-->
+<!--        <br>I'm passionate about Software Development in Microservices based architecture using frameworks like Spring boot and Docker.-->
+<!--        <br>I like to explore new technologies and play guitar occasionally.-->
+<!--        -->
+        <br><br><b>My Technical Skills include:</b><br>
+        < <span *ngFor="let skill of profile?.about?.skills"> {{skill}},</span> >
+
+<!--      <div class="about_info">-->
+<!--        <div>-->
+<!--          <span class="about_info-title">08+</span>-->
+<!--          <span class="about_info-name">Years <br> experience</span>-->
+<!--        </div>-->
+
+<!--        <div>-->
+<!--          <span class="about_info-title">20+</span>-->
+<!--          <span class="about_info-name">Completed <br> project</span>-->
+<!--        </div>-->
+
+<!--        <div>-->
+<!--          <span class="about_info-title">05+</span>-->
+<!--          <span class="about_info-name">Companies <br> worked</span>-->
+<!--        </div>-->
+<!--      </div>-->
+
+      <div class="about_buttons">
+        <a class="button button--flex" target="_blank" href="{{profile?.about?.cv}}">
+          Download CV<i class="uil uil-download-alt button_icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

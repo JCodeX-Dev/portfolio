@@ -1,0 +1,91 @@
+<!--==================== CONTACT ME ====================-->
+<section class="contact section" id="contact">
+  <h2 class="section_title">Contact Me</h2>
+  <span class="section_subtitle">Get in touch</span>
+
+  <div class="contact_container container"> <!--grid-->
+    <!--    <div>-->
+    <!--      <div class="contact_information">-->
+    <!--        <i class="uil uil-phone contact_icon"></i>-->
+
+    <!--        <div>-->
+    <!--          <h3 class="contact_title">Call Me</h3>-->
+    <!--          <span class="contact_subtitle">98765544321</span>-->
+    <!--        </div>-->
+    <!--      </div>-->
+
+    <!--      <div class="contact_information">-->
+    <!--        <i class="uil uil-envelope contact_icon"></i>-->
+
+    <!--        <div>-->
+    <!--          <h3 class="contact_title">Email</h3>-->
+    <!--          <span class="contact_subtitle">random@example.com</span>-->
+    <!--        </div>-->
+    <!--      </div>-->
+
+    <!--      <div class="contact_information">-->
+    <!--        <i class="uil uil-map-marker contact_icon"></i>-->
+
+    <!--        <div>-->
+    <!--          <h3 class="contact_title">Location</h3>-->
+    <!--          <span class="contact_subtitle">India</span>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+
+    <form class="contact_form grid" #mailForm="ngForm" (ngSubmit)="sendMail(mailForm)">
+      <div class="contact_inputs grid">
+        <div class="contact_content">
+          <label class="contact_label" for="">Name</label>
+          <input class="contact_input" type="text" name="name" required [(ngModel)]="contact.name" #name="ngModel" >
+          <div *ngIf="name.invalid && (name.dirty || name.touched)"
+               class="alert">
+
+            <div *ngIf="name.errors?.['required']"  >
+              Name is required.
+            </div>
+          </div>
+        </div>
+        <div class="contact_content">
+          <label class="contact_label" for="">Email</label>
+          <input class="contact_input" type="email" name="replyTo" ngModel required [(ngModel)]="contact.mail" #mail="ngModel"
+                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" email>
+          <div *ngIf="mail.invalid && (mail.dirty || mail.touched)" class="alert">
+            <div *ngIf="mail.errors?.['required']">
+              Email ID is required.
+            </div>
+            <div *ngIf="mail.errors?.['pattern']">
+              Provide a valid email ID
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact_content">
+        <label class="contact_label" for="">Subject</label>
+        <input class="contact_input" type="text" name="subject" ngModel required [(ngModel)]="contact.subject" #subject="ngModel">
+        <div *ngIf="subject.invalid && (subject.dirty || subject.touched)" class="alert">
+          <div *ngIf="subject.errors?.['required']">
+            Subject is required.
+          </div>
+        </div>
+      </div>
+      <div class="contact_content">
+        <label class="contact_label" for="">Message</label>
+        <textarea class="contact_input" cols="0" id="" name="" rows="4" name="message" ngModel required [(ngModel)]="contact.message" #message="ngModel"></textarea>
+        <div *ngIf="message.invalid && (message.dirty || message.touched );" class="alert">
+          <div *ngIf="subject.errors?.['required']">
+            Message is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="button-div" style="position: relative">
+        <button class="button button--flex">
+          Send Message
+          <i class="uil uil-message button_icon"></i>
+        </button>
+        <div id="snackbar" class="toast">Some text some message..</div>
+      </div>
+    </form>
+  </div>
+</section>
