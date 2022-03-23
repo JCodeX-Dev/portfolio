@@ -5,7 +5,8 @@ Website Demo
 
 https://user-images.githubusercontent.com/79001730/159660153-c3bb17a6-86e0-49c3-b5b5-26638ee3729c.mov
 
-![portfolio-clip (2)](https://user-images.githubusercontent.com/79001730/159661298-92142177-0808-4a29-afea-c62632a742ec.gif)
+![portfolio-clip (3)](https://user-images.githubusercontent.com/79001730/159661797-82c5d4ad-ac1b-4e5e-b8fd-f5acf1d7e6c9.gif)
+
 
 Application Architecture
 
